@@ -21,7 +21,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def choose(ctx, *, choices: str):
     options = choices.split()
     if options:
-        await ctx.send(f"🎲 我選擇：**{random.choice(options)}**")
+        await ctx.send(random.choice(options))
 
 if __name__ == "__main__":
     threading.Thread(target=run_flask).start()
